@@ -15,7 +15,10 @@ for year in range(1, years + 1):
     print("|       |   основа   | сумма %  |         |")
     print("| месяц | инвестиций | за месяц | капитал |")
     print("-------------------------------------------")
-# TODO: Make formula for compound interest rate
+# TODO: Make formula for compound interest rate (Drachev N.)
+main_money = initial_capital * (1 + percent/100)
+first_money = main_money - initial_capital
+initial_capital = initial_capital * (1 + percent/100)
 pass
 # TODO: Make network for formula
 pass
