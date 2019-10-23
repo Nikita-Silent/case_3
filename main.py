@@ -27,7 +27,10 @@ while investment_injection < 0:
     print(lc.ERR_4)
     investment_injection = float(input(lc.INV_INJ))
 
-# TODO: Make formula for compound interest rate
+# TODO: Make formula for compound interest rate (Drachev N.)
+main_money = initial_capital * (1 + interest_rate/100)
+first_money = main_money - initial_capital
+initial_capital = initial_capital * (1 + interest_rate/100)
 pass
 # TODO: Make network for formula
 pass
