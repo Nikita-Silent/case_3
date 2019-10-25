@@ -3,8 +3,14 @@
 #               Starnovskiy Sergey (),
 #               Zhuravlev Alexander ().
 # Program calculates compound interest with investment during each month and displays it in tables.
-
-import local as lc
+import local_1
+lang = int(input(local_1.CHOOSE))
+if lang == 1:
+    import local_en as lc
+elif lang == 2:
+    import local_esp as lc
+else:
+    import local_ru as lc
 
 years = float(input(lc.YRS))
 while years <= 0 or years != int(years):
@@ -41,5 +47,5 @@ for year in range(1, years + 1):
     print(year, lc.YEAR)
     print("-------------------------------------------")
     print("|       |   {}   | {}  |         |".format(lc.BASE, lc.SUM))
-    print("| {} | {} | {} | {} |".format(lc.MONTH, lc.INVESTMENTS, lc.F_MON, lc.CAP))
+    print("| {} | {} |{} | {} |".format(lc.MONTH, lc.INVESTMENTS, lc.F_MON, lc.CAP))
     print("-------------------------------------------")
