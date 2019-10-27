@@ -49,3 +49,9 @@ for year in range(1, years + 1):
     print("|       |   {}   | {}  |         |".format(lc.BASE, lc.SUM))
     print("| {} | {} |{} | {} |".format(lc.MONTH, lc.INVESTMENTS, lc.F_MON, lc.CAP))
     print("-------------------------------------------")
+for counter in range(1,12):
+    main_money = round(initial_capital * (1 + interest_rate / 100),2)
+    first_money = round(main_money - initial_capital,2)
+    initial_capital = round(initial_capital * (1 + interest_rate / 100),2)
+
+    print("|  {}  |  {}  |  {}  |  {}  |".format(counter,main_money,first_money,initial_capital))
