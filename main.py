@@ -44,15 +44,15 @@ for year in range(1, years+1):
             main_money = initial_capital * (1 + interest_rate / 100)
             first_money = main_money - initial_capital
             main_money = initial_capital * (1 + interest_rate / 100)
-            print("|  {}  |  {}  |  {}  |  {}  |".format(counter, '{:.2f}'.format(initial_capital),
-                                                         '{:.2f}'.format(first_money), '{:.2f}'.format(main_money)))
+            print("|  {:2}   |  {:2}  |  {:2}  |  {:2}  |".format(counter, '{:3.2f}'.format(initial_capital),
+                                                         '{:2.2f}'.format(first_money), '{:3.2f}'.format(main_money)))
             initial_capital = main_money
         else:
             main_money = initial_capital * (1 + interest_rate / 100)
             first_money = main_money - initial_capital
             main_money = initial_capital * (1 + interest_rate / 100) + investment_injection
-            print("|  {}  |  {}  |  {}  |  {}  |".format(counter, '{:.2f}'.format(initial_capital),
-                                                     '{:.2f}'.format(first_money), '{:.2f}'.format(main_money)))
+            print("|  {:2}   |  {:2}  |  {:2}  |  {:2}  |".format(counter, '{:2.2f}'.format(initial_capital),
+                                                     '{:2.2f}'.format(first_money), '{:2.2f}'.format(main_money)))
             initial_capital = main_money
     print("-------------------------------------------")
 pass
