@@ -40,16 +40,22 @@ for year in range(1, years+1):
     print("| {} | {} |{} | {} |".format(lc.MONTH, lc.INVESTMENTS, lc.F_MON, lc.CAP))
     print("-------------------------------------------")
     for counter in range(1, 13):
-        main_money = initial_capital * (1 + interest_rate / 100)
-        first_money = main_money - initial_capital
-        main_money = initial_capital * (1 + interest_rate / 100) + investment_injection
-        print("|  {}  |  {}  |  {}  |  {}  |".format(counter, '{:.2f}'.format(initial_capital),
+        if counter == 12 and year == years:
+            main_money = initial_capital * (1 + interest_rate / 100)
+            first_money = main_money - initial_capital
+            main_money = initial_capital * (1 + interest_rate / 100)
+            print("|  {}  |  {}  |  {}  |  {}  |".format(counter, '{:.2f}'.format(initial_capital),
+                                                         '{:.2f}'.format(first_money), '{:.2f}'.format(main_money)))
+            initial_capital = main_money
+            print("-------------------------------------------")
+        else:
+            main_money = initial_capital * (1 + interest_rate / 100)
+            first_money = main_money - initial_capital
+            main_money = initial_capital * (1 + interest_rate / 100) + investment_injection
+            print("|  {}  |  {}  |  {}  |  {}  |".format(counter, '{:.2f}'.format(initial_capital),
                                                      '{:.2f}'.format(first_money), '{:.2f}'.format(main_money)))
-        initial_capital = main_money
-    print("-------------------------------------------")
+            initial_capital = main_money
+            print("-------------------------------------------")
 pass
-# TODO: Make network for formula
-pass
-# TODO: Make loop for network
-pass
+
 
