@@ -1,7 +1,7 @@
 # Case-study #3
-# Developers:   Drachev Nikita (),
-#               Starnovskiy Sergey (),
-#               Zhuravlev Alexander ().
+# Developers:   Drachev Nikita (50),
+#               Starnovskiy Sergey (35),
+#               Zhuravlev Alexander (20).
 # Program calculates compound interest with investment during each month and displays it in tables.
 import local_1
 lang = int(input(local_1.CHOOSE))
@@ -32,7 +32,6 @@ investment_injection = float(input(lc.INV_INJ))
 while investment_injection < 0:
     print(lc.ERR_4)
     investment_injection = float(input(lc.INV_INJ))
-# TODO: Make formula for compound interest rate (Drachev N.)
 for year in range(1, years+1):
     print(year, lc.YEAR)
     print("-------------------------------------------")
